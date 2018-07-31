@@ -1,0 +1,23 @@
+mkdir aws
+cd aws/
+git init
+git clone https://github.aws.uk.website.com/opspe/control-repo
+git branch
+cd control-repo/
+git branch
+git flow init
+	configure the master(provisioning) develop(development) rest all should have "_" rather then "/" for eg; hotfix/ should be hotfix_
+
+
+git flow hotfix start 0_1_13
+bumpversion patch
+git branch
+cd hieradata/locations/aws/eu-west-1/core/
+vi provisioning.yaml
+git add provisioning.yaml
+git commit -m"CP-287 #comment added new environment"
+git push origin -u hotfix_0_1_13
+
+Test the 
+git tag 0_1_13
+git push --tags
