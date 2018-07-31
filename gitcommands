@@ -14,7 +14,8 @@ git commit -m"first commit"
 git status
 git push origin master
 
-
+https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html
+google simple git commands
 
 ====================More Advance commands================
 git branch
