@@ -21,3 +21,10 @@ git push origin -u hotfix_0_1_13
 Test the 
 git tag 0_1_13
 git push --tags
+
+
+git add .
+git show
+git commit -a
+git status
+git push origin master
