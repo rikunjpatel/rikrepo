@@ -17,6 +17,15 @@ git push origin master
 https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html
 google simple git commands
 
+
+Set Global config
+git config --global user.name "Rik Patel"
+git config --global user.email "rpatel3@twutil.net"
+
+Remove Global COnfig
+git config --global --unset user.email
+git config --global --unset user.name
+
 ====================More Advance commands================
 git branch
 
