@@ -33,6 +33,34 @@ git config --global --unset user.email
 git config --global --unset user.name
 
 ====================More Advance commands================
+Create a new Branch and switch to it
+  git checkout -b newbranchname
+Will tell you which branch currently you are on
+  git branch
+Will switch to master branch
+  git checkout master 
+  git checkout newbranchname
+  
+Do the changes required to do in newbranchname run git add , git commit and git push to dev branch
+  git add --all
+  git commit -a -m 'added a new HISTORYon Dev Branch'
+  git push --set-upstream origin newbranchname
+  git status
+  
+Now if all looks good with the changes made on newbranchname, merge it to the master
+First checkout to master
+  git checkout master 
+  git branch
+  git status
+  git show
+  
+  git merge dev
+  git status
+  git show
+Push it from local to master branch, confirm with git show & status
+  git push origin master
+
+
 git branch
 
 cd control-repo/
