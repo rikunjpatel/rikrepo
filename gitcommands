@@ -2,6 +2,12 @@
 mkdir repo
 cd repo/
 git init
+
+git remote add origin https://thameswater.visualstudio.com/IS%20-%20Azure%20General%20Purpose/_git/Cloud%20Automation%20Scripts
+git remote -v
+
+git pull origin master
+
 git clone https://github.aws.uk.website.com/opspe/control-repo
 or
 git clone https://github.com/rikunjpatel/rikrepo.git
