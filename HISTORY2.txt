@@ -46,5 +46,26 @@
   43 cat ./history.txt >> HISTORY2.txt
   44 cat ./HISTORY2.txt
   45 ls
+  46 history > ./HISTORY2.txt
+  47 cat ./HISTORY2.txt
+  48 git commit -a -m 'added a new HISTORYon Dev Branch'
+  49 git show
+  50 git status
+  51 git checkout master
+  52 git merge dev
+  53 git checkout dev
+  54 git show
+  55 git status
+  56 git commit -a -m 'added a new HISTORYon Dev Branch'
+  57 git add --all
+  58 git status
+  59 git push origin/dev
+  60 git push origin dev
+  61 git push origin
+  62 git push --set-upstream origin dev
+  63 git add --all
+  64 git status
+  65 git commit -a -m 'added a new HISTORYon Dev Branch'
+  66 git push --set-upstream origin dev
 
 
