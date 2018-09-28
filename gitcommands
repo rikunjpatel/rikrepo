@@ -2,6 +2,13 @@
 mkdir repo
 cd repo/
 git init
+Set Global config
+git config --global user.name "Rik Patel"
+git config --global user.email "rpatel3@twutil.net"
+
+Remove Global COnfig
+git config --global --unset user.email
+git config --global --unset user.name
 
 git remote add origin https://thameswater.visualstudio.com/IS%20-%20Azure%20General%20Purpose/_git/Cloud%20Automation%20Scripts
 git remote -v
@@ -22,15 +29,6 @@ git push origin master
 
 https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html
 google simple git commands
-
-
-Set Global config
-git config --global user.name "Rik Patel"
-git config --global user.email "rpatel3@twutil.net"
-
-Remove Global COnfig
-git config --global --unset user.email
-git config --global --unset user.name
 
 ====================More Advance commands================
 Create a new Branch and switch to it
@@ -59,6 +57,11 @@ First checkout to master
   git show
 Push it from local to master branch, confirm with git show & status
   git push origin master
+
+Now if you did some change on the master branch directly, when you go back to Dev it's not visible
+so simply first switch to the Dev branch and pull the updates from master branch
+git pull origin master
+
 
 
 git branch
