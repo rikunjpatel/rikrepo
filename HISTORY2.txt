@@ -1,0 +1,50 @@
+
+  Id CommandLine
+  -- -----------
+   1 cd
+   2 cd ./clouddrive/Docs/
+   3 cd ./rikgit/
+   4 git remote -v
+   5 cd ./Cloud%20Automation%20Scripts/
+   6 ls
+   7 cd ..
+   8 cd ..
+   9 mkdir rikunjpatel@github
+  10 cd ./rikunjpatel@github/
+  11 git show
+  12 git init
+  13 git remote add origin https://github.com/rikunjpatel/rikrepo.git
+  14 clear
+  15 git remote -v
+  16 git pull origin master
+  17 ls
+  18 cat ./gitcommands
+  19 history > history.txt
+  20 ls
+  21 cat ./history.txt
+  22 clear
+  23 ls
+  24 git status
+  25 git add .
+  26 git status
+  27 git show
+  28 git commit -m"first commit from SHELL"
+  29 git show
+  30 git status
+  31 git push origin master
+  32 git status
+  33 git show
+  34 git branch
+  35 git branch dev
+  36 git branch
+  37 git checkout dev
+  38 git branch
+  39 ls
+  40 cat ./history.txt > HISTORY2.txt
+  41 cat ./history.txt >> HISTORY2.txt
+  42 cat ./history.txt >> HISTORY2.txt
+  43 cat ./history.txt >> HISTORY2.txt
+  44 cat ./HISTORY2.txt
+  45 ls
+
+
