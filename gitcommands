@@ -15,6 +15,8 @@ git remote add origin https://thameswater.visualstudio.com/Thames%20Cloud%20-%20
 git remote -v
 
 git pull origin master
+or
+git pull https://thameswater.visualstudio.com/Thames%20Cloud%20-%20Azure/_git/Cloud%20Automation%20Scripts
 
 git clone https://github.aws.uk.website.com/opspe/control-repo
 or
