@@ -64,7 +64,7 @@ Once you checkout a branch anything you do in that folder will be done in that C
   10 ls
   11 git add --all
   12  git commit -a -m 'added a VM Runbook on VM Branch'
-  13  git push --set-upstream origin vm
+  13  git push --set-upstream origin vm # (Local Branch Name that needs to be pushed /created on the repo)
   14 git pull origin vm   #<<< need to run first to merge the remote branch with local branch
   15  git push --set-upstream origin vm
   
