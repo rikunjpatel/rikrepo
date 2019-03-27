@@ -35,23 +35,25 @@ google simple git commands
 
 ====================More Advance commands================
 #####  Branching   ####
- #To show local and remote branches
+ # To show local and remote branches
  git branch -a
  git branch -r #(only remote branches) to see all the remotes and their branches. 
  
- #To pull remote branch and create a local branch.
+ # To pull remote branch and create a local branch.
  git checkout -t remotes/repo/branch
  
+# To delete a local branch
+git branch -d the_local_branch
 
-#Create a new Branch and switch to it
+# Create a new Branch and switch to it
   git checkout -b newbranchname
-#Will tell you which branch currently you are on
+# Will tell you which branch currently you are on
   git branch
-#Will switch to master branch
+# Will switch to master branch
   git checkout master 
   git checkout newbranchname
 
-#Once you checkout a branch anything you do in that folder will be done in that Checked branch.
+# Once you checkout a branch anything you do in that folder will be done in that Checked branch.
 
  If the branch already exist it will still create local branch, but will not be able to Push any updates.
  First pull the remove branch with "git pull origin vm"
