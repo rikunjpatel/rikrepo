@@ -6,6 +6,17 @@ Set Global config
 git config --global user.name "Rik Patel"
 git config --global user.email "rpatel3@twutil.net"
 
+# To configure you laptop or personal VM without git prompting user/password.
+#Create .netrc file in your home dir with below content
+
+[thames@VMName ~]$ pwd
+/home/user
+[thames@VMName ~]$ cat .netrc
+machine project.visualstudio.com
+       login rpatel3@hello.net
+       password Passw0rd!
+
+
 Remove Global COnfig
 git config --global --unset user.email
 git config --global --unset user.name
