@@ -21,13 +21,13 @@ Remove Global COnfig
 git config --global --unset user.email
 git config --global --unset user.name
 
-git remote add origin https://PROJECT.visualstudio.com/Thames%20Cloud%20-%20Azure/_git/Cloud%20Automation%20Scripts
+git remote add origin https://PROJECT.visualstudio.com/Project%20Cloud%20-%20Azure/_git/Cloud%20Automation%20Scripts
 
 git remote -v
 
 git pull origin master
 or
-git pull https://PROJECT.visualstudio.com/Thames%20Cloud%20-%20Azure/_git/Cloud%20Automation%20Scripts
+git pull https://PROJECT.visualstudio.com/Project%20Cloud%20-%20Azure/_git/Cloud%20Automation%20Scripts
 
 git clone https://github.aws.uk.website.com/opspe/control-repo
 or
