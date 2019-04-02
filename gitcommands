@@ -23,6 +23,9 @@ git config --global --unset user.name
 
 git remote add origin https://PROJECT.visualstudio.com/Project%20Cloud%20-%20Azure/_git/Cloud%20Automation%20Scripts
 
+# Below command will keep git efficient and quick
+git config gc.auto 0 
+
 git remote -v
 
 git pull origin master
