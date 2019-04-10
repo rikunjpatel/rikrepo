@@ -12,7 +12,7 @@ git config --global user.email "rpatel3@twutil.net"
 [thames@VMName ~]$ pwd
 /home/user
 [thames@VMName ~]$ cat .netrc
-machine project.visualstudio.com
+machine PROJECTNAME.visualstudio.com
        login rpatel3@hello.net
        password Passw0rd!
 
@@ -47,8 +47,7 @@ git push origin master
 https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html
 google simple git commands
 
-====================More Advance commands================
-#####  Branching   ####
+#####  BRANCHING   ####
  # To show local and remote branches
  git branch -a
  git branch -r #(only remote branches) to see all the remotes and their branches. 
@@ -74,7 +73,18 @@ git branch -d the_local_branch
  This will download and pair the local branch with remote. 
  Only then you will be allowed to Push any new changes to the repo for that branch.
  
- 
+ git commit -a -m 'added a VM Runbook on VM Branch'
+ git push --set-upstream origin vm # (Local Branch Name that needs to be pushed /created on the repo)
+ git pull origin vm   #<<< need to run first to merge the remote branch with local branch
+ git push --set-upstream origin vm
+  
+  
+#Do the changes required to do in newbranchname run git add , git commit and git push to dev branch
+  git add --all
+  git commit -a -m 'added a new HISTORYon Dev Branch'
+  git push --set-upstream origin newbranchname
+  git status
+  
  
  
  
