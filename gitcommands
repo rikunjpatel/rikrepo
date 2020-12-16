@@ -47,17 +47,107 @@ git push origin master
 https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html
 google simple git commands
 
-#####  BRANCHING   ####
- # To show local and remote branches
- git branch -a
- git branch -r #(only remote branches) to see all the remotes and their branches. 
- 
+#####  Workinng with Remote Repos BRANCHING   ####
  # To pull REMOTE BRANCH and create a local branch.
- First Add remote Repo --> then run Git Fetch (this will fetch all the remote branches) --> Run Git Branch -av (this will show all the remote branches)
+1) First Add remote Repo
+
+PS C:\Users\Rikits\Dropbox\Cloud\Azure\GITFIT>git remote add RikTest https://github.com/rikunjpatel/RikTest.git  
+
+PS C:\Users\Rikits\Dropbox\Cloud\Azure\GITFIT> git remote -v
+RikTest https://github.com/rikunjpatel/RikTest.git (fetch)
+RikTest https://github.com/rikunjpatel/RikTest.git (push)
+
+2) then run Git Fetch (this will fetch all the remote branches) 
+
+PS C:\Users\Rikits\Dropbox\Cloud\Azure\GITFIT> git fetch --all 
+Fetching RikTest
+From https://github.com/rikunjpatel/RikTest
+ * [new branch]      NEWBranch  -> RikTest/NEWBranch
+ * [new branch]      develop    -> RikTest/develop
+ * [new branch]      master     -> RikTest/master
  
- Now run Git Checkout -t remotes/repo/branch (this will copy the content of the remote branch and create a local branch)
+
+3) Run Git Branch -av (this will show all the remote branches)
+
+PS C:\Users\Rikits\Dropbox\Cloud\Azure\GITFIT> git branch -av 
+* master                    b80db21 Merge pull request #4 from rikunjpatel/newbranch
+  remotes/RikTest/NEWBranch a406ea9 Merge branch 'master' of https://github.com/rikunjpatel/MyRepoRik into NEWBranch  
+  remotes/RikTest/develop   1783af7 Merge branch 'hotfix/0.0.2' into develop
+  remotes/RikTest/master    c33fc0a WWWW
  
+4) Now run Git Checkout -t remotes/repo/branch (this will copy the content of the remote branch and create a local branch)
+ 
+PS C:\Users\Rikits\Dropbox\Cloud\Azure\GITFIT> git checkout -t remotes/RikTest/develop
+Switched to a new branch 'develop'
+Branch 'develop' set up to track remote branch 'develop' from 'RikTest'.
+
+PS C:\Users\Rikits\Dropbox\Cloud\Azure\GITFIT> git branch -av
+* develop                   1783af7 Merge branch 'hotfix/0.0.2' into develop
+  master                    b80db21 Merge pull request #4 from rikunjpatel/newbranch
+  remotes/RikTest/NEWBranch a406ea9 Merge branch 'master' of https://github.com/rikunjpatel/MyRepoRik into NEWBranch  remotes/RikTest/develop   1783af7 Merge branch 'hotfix/0.0.2' into develop
+  remotes/RikTest/master    c33fc0a WWWW
   
+ 
+ 
+5) Now do the changes to the required files or create new file ---> Stage --> commmit --> Push (you cal also push with the click of button on vscode it easier and quicker)
+  
+ git push --set-upstream RemoteRepo Remote branch name
+ eg; git push --set-upstream RikRepo dev 
+ 
+5.a) PS C:\Users\Rikits\Dropbox\Cloud\Azure\GITFIT> git branch -av
+* develop                   01b329e [ahead 2] just another line added
+  master                    b80db21 Merge pull request #4 from rikunjpatel/newbranch
+  remotes/RikTest/NEWBranch a406ea9 Merge branch 'master' of https://github.com/rikunjpatel/MyRepoRik into NEWBranch  
+  remotes/RikTest/develop   e1cf15c deleted some files and updated readme.md
+  remotes/RikTest/master    c33fc0a WWWW
+
+5.b) PS C:\Users\Rikits\Dropbox\Cloud\Azure\GITFIT> git status
+On branch develop
+Your branch is ahead of 'RikTest/develop' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+5.c) PS C:\Users\Rikits\Dropbox\Cloud\Azure\GITFIT> git push --set-upstream RikTest develop
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 549 bytes | 32.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/rikunjpatel/RikTest.git
+   e1cf15c..01b329e  develop -> develop
+Branch 'develop' set up to track remote branch 'develop' from 'RikTest'.
+PS C:\Users\Rikits\Dropbox\Cloud\Azure\GITFIT> git show
+commit 01b329e5b79ca853c97910047c4e240a5e3131ce (HEAD -> develop, RikTest/develop)
+Author: Rik Patel <rikunjpatel@yahoo.com>
+Date:   Wed Dec 16 13:52:10 2020 +0000
+
+    just another line added
+
+diff --git a/README.md b/README.md
+index 26148b0..82634ec 100644
+--- a/README.md
++++ b/README.md
+@@ -1 +1 @@
+-# MyRepoRik
+\ No newline at end of file
++# MyRepoRik
+
+5.d) PS C:\Users\Rikits\Dropbox\Cloud\Azure\GITFIT> git status
+On branch develop
+Your branch is up to date with 'RikTest/develop'.
+
+nothing to commit, working tree clean
+
+6) Once pushed check with Git Branch -av to confirm the Hash number matches with the local branch along with the comment
+ 
+PS C:\Users\Rikits\Dropbox\Cloud\Azure\GITFIT> git branch -av  
+* develop                   01b329e just another line added  <<<<--Check the comment and the update code it's same as REMOTE branch)
+  master                    b80db21 Merge pull request #4 from rikunjpatel/newbranch
+  remotes/RikTest/NEWBranch a406ea9 Merge branch 'master' of https://github.com/rikunjpatel/MyRepoRik into NEWBranch  
+  remotes/RikTest/develop   01b329e just another line added <<<<--Check the comment and the update code it's same as LOCAL branch)
+  remotes/RikTest/master    c33fc0a WWWW
  
 # To delete a local branch
 git branch -d the_local_branch
@@ -134,8 +224,6 @@ Push it from local to master branch, confirm with git show & status
 Now if you did some change on the master branch directly, when you go back to Dev it's not visible
 so simply first switch to the Dev branch and pull the updates from master branch
 git pull origin master
-
-
 
 git branch
 
