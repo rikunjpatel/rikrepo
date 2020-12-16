@@ -52,7 +52,7 @@ google simple git commands
  git branch -a
  git branch -r #(only remote branches) to see all the remotes and their branches. 
  
- # To pull remote branch and create a local branch.
+ # To pull REMOTE BRANCH and create a local branch.
  First Add remote Repo --> then run Git Fetch (this will fetch all the remote branches) --> Run Git Branch -av (this will show all the remote branches)
  
  Now run Git Checkout -t remotes/repo/branch (this will copy the content of the remote branch and create a local branch)
