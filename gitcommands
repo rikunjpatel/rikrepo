@@ -181,6 +181,38 @@ git branch -d the_local_branch
   
  
  
+ #HOW to keep the local branch updated with Master branch
+ 1) Switch to master branch
+ 2) Pull the latest update 
+ 3) Switch to the local branch you are working on
+ 4) run Git Rebase Master (or the branch you want to pull the updated from and merge local branch)
+ 
+ Rik.Patel@laptop repo % git checkout master
+Switched to branch 'master'
+Your branch is behind 'origin/master' by 3 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Rik.Patel@laptop repo % git branch -v      
+  CAZR-2017-Backup                 414b1bf6 image id updated to test zero downtime
+  CAZR-2017-deploy-logstash-ukwest 414b1bf6 image id updated to test zero downtime
+* master                           c5a1edd6 #patch Hotfix/ocp azdo agents (#892)
+  master-temp                      fa18eaa7 #patch Auto device push on v2 Palo pipelines (#891) (<<<< Notice the branch is not same as Master)
+  whitelist_urls                   8d152a7d updated list
+
+Rik.Patel@laptop repo % git checkout master-temp
+Switched to branch 'master-temp'
+
+Rik.Patel@laptop nbs-azure-lz % git rebase master
+Successfully rebased and updated refs/heads/master-temp.
+
+Rik.Patel@laptop repo % git branch -v           
+  CAZR-2017-Backup                 414b1bf6 image id updated to test zero downtime
+  CAZR-2017-deploy-logstash-ukwest 414b1bf6 image id updated to test zero downtime
+  master                           c5a1edd6 #patch Hotfix/ocp azdo agents (#892)
+* master-temp                      c5a1edd6 #patch Hotfix/ocp azdo agents (#892) (<<<< Notice the branch is same as Master after Rebasing)
+  whitelist_urls                   8d152a7d updated list
+  
+ 
  
  
   Id CommandLine
