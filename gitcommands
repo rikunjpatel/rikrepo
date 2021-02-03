@@ -181,7 +181,8 @@ git branch -d the_local_branch
   
  
  
- #HOW to keep the local branch updated with Master branch
+ # HOW to keep the local branch UPDATED with Master branch
+ 
  1) Switch to master branch
  2) Pull the latest update 
  3) Switch to the local branch you are working on
@@ -212,6 +213,25 @@ Rik.Patel@laptop repo % git branch -v
 * master-temp                      c5a1edd6 #patch Hotfix/ocp azdo agents (#892) (<<<< Notice the branch is same as Master after Rebasing)
   whitelist_urls                   8d152a7d updated list
   
+ 
+ # HOW to update the local branch with Master when you have CONFLICTS in different files?
+ 
+ 1) Switch to master branch
+ 2) Pull the latest update 
+ 3) Switch to the local branch you are working on
+ 4) in VSCode open Command Palette (CTLR + Shift + P) --> Type Merge --> Select Git Merge Branch --> Select Master
+ 5) This will merge the master branch with the local branch. It will show you the conflicts in all the files in the left side of the VSCode.
+ 6) Files with conflicts will show (c) on the left side of VSCode (Make sure to select Git on left side)
+ 7) resolve the conflict(in the file by Either accepting incoming change or manually editing the conflicting lines or Accepting both the changes)
+ 8) resolve the conflict in all the files
+ 9) click plus (+) sign on all the conflict resolved files
+ 10) Now click Tick (✓) on the top of the files in VSCode to add all the files.
+ 11) now push all the changes to Github for the local branch
+ 12) Verify on the GitHub by checking your branch.
+ 
+ 
+ 
+ 
  
  
  
