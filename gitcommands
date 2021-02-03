@@ -202,7 +202,7 @@ Rik.Patel@laptop repo % git branch -v
 Rik.Patel@laptop repo % git checkout master-temp
 Switched to branch 'master-temp'
 
-Rik.Patel@laptop nbs-azure-lz % git rebase master
+Rik.Patel@laptop nbs-azure-lz % git rebase master (<<<<<< THIS WILL pull all the updates from master and rebase it to the current branch) 
 Successfully rebased and updated refs/heads/master-temp.
 
 Rik.Patel@laptop repo % git branch -v           
